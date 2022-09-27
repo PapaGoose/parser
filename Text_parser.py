@@ -101,7 +101,7 @@ if result_dict:
     style = {text: [{'selector' : '', 'props' : [('border','2px solid green')]}]}
     show_df = df.set_index(pd.Index(df['indexs'].values)).iloc[-3:].drop('indexs', axis=1)
 
-    if st.button('Очистить таблицу', key='1'):
+    if st.button('Очистить таблицу', key='2'):
         df = pd.read_csv('test.csv')
         df.iloc[0:0].to_csv('test.csv', index=False)
     else:
